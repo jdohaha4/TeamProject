@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QnAFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFE082"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="믿고맡견의 고객님!"
+            android:textAlignment="center"
+            android:textColor="@color/com_kakao_brown"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="도움이 필요하신가요?"
+            android:textAlignment="center"
+            android:textColor="@color/com_kakao_brown"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="이용시간 09:00 - 18:00"
+                    android:textColor="@color/com_kakao_brown"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="점심시간 13:00 - 14:00"
+                    android:textColor="@color/com_kakao_brown"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_qna_call"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background1"
+                android:drawableStart="@drawable/phone"
+                android:gravity="center|center_vertical"
+                android:text="1501-1501"
+                android:textColor="@color/com_kakao_brown"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/btn_qna1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background2"
+            android:text="전체" />
+
+
+        <Button
+            android:id="@+id/btn_qna2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background1"
+            android:text="펫시터 서비스" />
+
+        <Button
+            android:id="@+id/btn_qna3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background1"
+            android:text="서비스 가격" />
+
+        <Button
+            android:id="@+id/btn_qna4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background1"
+            android:text="기타" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scr_qna1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/txt_qan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="Q. 펫시터를 예약했어요. 준비물은 뭐가 있나요?"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ToggleButton
+                    android:id="@+id/togBtn_qna_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:textOff=">"
+                    android:textOn="∨"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_ans9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="20sp"
+                android:paddingTop="5sp"
+                android:paddingRight="20sp"
+                android:text="펫시터의 집에 강아지를 맡기실 때 강아지가 평소에 이용하는 배변판과 배변패드, 평소에 먹던 사료, 강아지 방석 및 침대, 장난감 그리고 주인의 냄새가 베어있는 옷가지 등을 함께 펫시터에게 전달해주시는 것이 좋습니다."
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_qna_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="──────────────────────────────────────"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_qan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="Q. 펫시터는 믿을 수 있나요?"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ToggleButton
+                    android:id="@+id/togBtn_qna_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:textOff=">"
+                    android:textOn="∨"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_ans7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="20sp"
+                android:paddingTop="5sp"
+                android:paddingRight="20sp"
+                android:text="철저한 사전면접과 신원검증을 거쳐 펫시터를 선발하고 내부 교육을 모두 수료한 회사소속 펫시터를 보내드리고 있습니다!돌봄 진행 전 사전만남을 통해 내 반려견이 펫시터와 잘 지낼 수 있는지 확인하시고 상세한 산책경로 및 돌봄 요청 내용에 대해 펫시터와 상의하실 수 있습니다!"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_qna_line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="──────────────────────────────────────"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_qan3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="Q. 펫시터 서비스 지역이 어디인가요?"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ToggleButton
+                    android:id="@+id/togBtn_qna_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:textOff=">"
+                    android:textOn="∨"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_ans8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="20sp"
+                android:paddingTop="5sp"
+                android:paddingRight="20sp"
+                android:text="서울과 경기 성남, 고양시, 김포시에 한하여 서비스 제공이 가능합니다.현재 수도권 위주로 지역확장을 예정중이오니 서비스 불가 지역이라고 하더라도 미리 방문 희망의사를 밝혀주시면 추후 지역확장시 참고하여 서비스 제공 도와드리겠습니다. 감사합니다"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_qna_line3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="──────────────────────────────────────"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_qan6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Q.다른 반려동물도 맡길 수 있나요?"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/togBtn_qna_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_light"
+                        android:textOff=">"
+                        android:textOn="∨"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_ans4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="20sp"
+                    android:text="강아지 이외의 설치류, 조류, 파충류, 양서류 등의 동물에 대해서는 충분한 경험과 지식을 갖춰야 안전하고 편안한 돌봄으로 이어질 수 있으므로 현재로서는 강아지 이외의 동물에 대한 케어는 제공해드리기 힘든점 양해부탁드립니다. 감사합니다."
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_qna_line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="──────────────────────────────────────"
+                    android:textColor="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_qan7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Q. 펫시터 서비스가 뭔가요?"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/togBtn_qna_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_light"
+                        android:textOff=">"
+                        android:textOn="∨"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_ans5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="20sp"
+                    android:text="펫시터(Pet Sitter)는 주인이 없을때 반려동물을 대신 돌봐주는 사람을 말합니다. 펫시터는 왜 필요할까요? 한국에서는 많은 견주들이 여행을 가거나 자리를 비울때 애견호텔에 강아지를 맡깁니다.우리집 근처의 믿을만한 펫시터에게 강아지를 맡길 수 있다는 것이 큰 장점입니다."
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_qna_line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="──────────────────────────────────────"
+                    android:textColor="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_qan8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Q. 핸드폰번호 변경하기"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/togBtn_qna_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_light"
+                        android:textOff=">"
+                        android:textOn="∨"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_ans6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="20sp"
+                    android:text="휴대폰 번호 변경은 계정관리 > 개인정보 수정 메뉴에서 본인 인증을 하신 후 기존에 가입하신 회원 정보의 명의와 일치할 경우 수정이 가능하십니다."
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_qna_line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="──────────────────────────────────────"
+                    android:textColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_qan4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Q. 돌봄 요금은 얼마인가요?"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/togBtn_qna_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_light"
+                        android:textOff=">"
+                        android:textOn="∨"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_ans1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="20sp"
+                    android:text="돌봄 요금은 30분,60분120분 단위로 있습니다. 소중형견, 대형견 별로 나뉘며 자세한 사항은 이용요금 페이지에서 확인바랍니다."
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_qna_line7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="──────────────────────────────────────"
+                    android:textColor="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_qan5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Q. 산책 요금은 얼마인가요?"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/togBtn_qna_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_light"
+                        android:textOff=">"
+                        android:textOn="∨"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_ans2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="20sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="20sp"
+                    android:text="산책 요금은 30분,60분120분 단위로 있습니다. 소중형견, 대형견 별로 나뉘며 자세한 사항은 이용요금 페이지에서 확인바랍니다."
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_qna_line8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="──────────────────────────────────────"
+                    android:textColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/img_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/background_light"
+                android:foregroundGravity="center"
+                android:src="@drawable/up" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
